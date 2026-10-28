@@ -1,0 +1,38 @@
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js and Angular
+node_modules/
+.angular/
+.nx/
+dist/
+coverage/
+/package-lock.json
+/frontend/ng
+/frontend/npm
+/frontend/build.bat
+/frontend/build-and-run.bat
+/frontend/start.bat
+/.vscode/settings.json
+
+# Local application data
+*.sqlite
+*.sqlite3
+*.db
+backend/uploads/
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db

@@ -1,4 +1,3 @@
-# GRWS
 # AI Personal Stylist
 
 ## Run locally on Windows

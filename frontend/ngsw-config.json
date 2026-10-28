@@ -1,0 +1,15 @@
+{
+  "formatVersion": 1,
+  "navigationPreload": true,
+  "preload": [
+    {
+      "url": "/",
+      "requestType": "navigate"
+    }
+  ],
+  "plugins": {
+    "navigationPreload": {
+      "urlInterpolator": (context: any) => `${context.requestUrl}`
+    }
+  }
+}

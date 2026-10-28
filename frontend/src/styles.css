@@ -1,0 +1,1271 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.dashboard-card .p-card {
+  height: 100%;
+  border: 1px solid #ece7ef;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 7px 20px rgb(54 37 64 / 5%);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.dashboard-card .p-card:hover {
+  box-shadow: 0 12px 28px rgb(54 37 64 / 9%);
+  transform: translateY(-2px);
+}
+
+.dashboard-card .p-card-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.dashboard-card .p-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0;
+}
+
+.wardrobe-page {
+  min-height: 100vh;
+  background: #f8f6f9;
+  color: #292333;
+}
+
+.wardrobe-header {
+  background: #fff;
+  border-bottom: 1px solid #ece8ef;
+}
+
+.wardrobe-header-content,
+.wardrobe-content {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.wardrobe-header-content {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.wardrobe-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #292333;
+  font-size: 16px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wardrobe-brand-mark,
+.wardrobe-panel-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.wardrobe-brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #f0e8f5;
+  color: #76518d;
+}
+
+.wardrobe-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wardrobe-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  color: #665f6d;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wardrobe-nav-link:hover,
+.wardrobe-nav-link.active {
+  background: #f2edf5;
+  color: #68477e;
+}
+
+.wardrobe-content {
+  padding: 42px 0 64px;
+}
+
+.wardrobe-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 36px;
+  border: 1px solid #eee6f1;
+  border-radius: 20px;
+  background: linear-gradient(112deg, #fff 12%, #f1eaf5 100%);
+  box-shadow: 0 8px 24px rgb(54 37 64 / 5%);
+}
+
+.wardrobe-eyebrow {
+  margin: 0 0 9px;
+  color: #805b92;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.wardrobe-intro h1 {
+  margin: 0;
+  color: #30263a;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.wardrobe-intro p:last-child {
+  margin: 8px 0 0;
+  color: #706978;
+  font-size: 15px;
+}
+
+.wardrobe-intro-icon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #e6d7ee, #f8e9df);
+  color: #79548f;
+  font-size: 28px;
+}
+
+.wardrobe-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.5fr);
+  align-items: start;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.wardrobe-panel .p-card {
+  border: 1px solid #ece7ef;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 7px 20px rgb(54 37 64 / 5%);
+}
+
+.wardrobe-panel .p-card-body {
+  padding: 23px;
+}
+
+.wardrobe-panel .p-card-content {
+  padding: 0;
+}
+
+.wardrobe-item-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.wardrobe-item-form > label,
+.photo-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  color: #514957;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wardrobe-item-form > label:nth-child(4),
+.wardrobe-item-form > label:nth-child(5),
+.photo-field,
+.wardrobe-item-form > [role="alert"],
+.wardrobe-item-form > [role="status"],
+.wardrobe-item-form > p-button {
+  grid-column: 1 / -1;
+}
+
+.wardrobe-item-form input:not([type="file"]),
+.wardrobe-item-form select {
+  width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 9px 11px;
+  border: 1px solid #ded7e3;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: #352d3a;
+  font: inherit;
+  font-weight: 400;
+}
+
+.wardrobe-item-form input:not([type="file"]):focus,
+.wardrobe-item-form select:focus {
+  border-color: #9676a8;
+  box-shadow: 0 0 0 3px rgb(118 81 141 / 13%);
+}
+
+.wardrobe-item-form input[type="color"] {
+  min-height: 42px;
+  padding: 5px;
+}
+
+.photo-field-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin: 0;
+  color: #514957;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.optional-label {
+  color: #847d89;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.wardrobe-photo-upload {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e8e0eb;
+  border-radius: 12px;
+  background: #fdfbfe;
+}
+
+.wardrobe-photo-upload .p-fileupload-buttonbar {
+  padding: 12px;
+  border: 0;
+  border-bottom: 1px solid #eee8f1;
+  background: #fcfafc;
+}
+
+.wardrobe-photo-upload .p-fileupload-buttonbar .p-button {
+  margin: 0;
+}
+
+.wardrobe-photo-upload .p-fileupload-content {
+  min-height: 142px;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  border: 0;
+  background: transparent;
+}
+
+.wardrobe-photo-upload .p-fileupload-row {
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #eee8f1;
+  border-radius: 10px;
+  background: white;
+}
+
+.wardrobe-photo-upload .p-fileupload-row > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.photo-dropzone {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  color: #807986;
+  text-align: center;
+}
+
+.photo-dropzone-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 3px;
+  place-items: center;
+  border-radius: 14px;
+  background: #f1e9f5;
+  color: #76518d;
+  font-size: 18px;
+}
+
+.photo-dropzone strong {
+  color: #42374b;
+  font-size: 13px;
+}
+
+.photo-dropzone > span:last-child {
+  font-size: 12px;
+}
+
+.wardrobe-item-form > [role="alert"],
+.wardrobe-item-form > [role="status"] {
+  margin: 0;
+  font-size: 13px;
+}
+
+.wardrobe-item-form > [role="alert"] {
+  color: #b42318;
+}
+
+.wardrobe-item-form > [role="status"] {
+  color: #38734a;
+}
+
+.wardrobe-item-form > p-button {
+  justify-self: start;
+}
+
+.wardrobe-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wardrobe-panel-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #f1e9f5;
+  color: #76518d;
+  font-size: 17px;
+}
+
+.inventory-icon {
+  background: #eaf0fb;
+  color: #5272a9;
+}
+
+.wardrobe-panel-heading h2 {
+  margin: 0;
+  color: #332c39;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wardrobe-panel-heading p {
+  margin: 5px 0 0;
+  color: #77717d;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.wardrobe-file-upload {
+  display: block;
+  margin-top: 20px;
+}
+
+.wardrobe-file-upload .p-fileupload-buttonbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #eee8f1;
+  border-radius: 12px 12px 0 0;
+  background: #fcfafc;
+}
+
+.wardrobe-file-upload .p-fileupload-buttonbar .p-button {
+  margin: 0;
+}
+
+.wardrobe-file-upload .p-fileupload-content {
+  min-height: 172px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border: 1px dashed #d9cde1;
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: #fdfbfe;
+}
+
+.planner-page {
+  min-height: 100vh;
+  background: #f8f6f9;
+  color: #292333;
+}
+
+.planner-header {
+  background: #fff;
+  border-bottom: 1px solid #ece8ef;
+}
+
+.planner-header-content,
+.planner-content {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.planner-header-content {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.planner-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #292333;
+  font-size: 16px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.planner-brand-mark,
+.planner-card-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.planner-brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #f0e8f5;
+  color: #76518d;
+}
+
+.planner-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.planner-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  color: #665f6d;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.planner-nav-link:hover,
+.planner-nav-link.active {
+  background: #f2edf5;
+  color: #68477e;
+}
+
+.planner-content {
+  padding: 42px 0 64px;
+}
+
+.planner-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 36px;
+  border: 1px solid #eee6f1;
+  border-radius: 20px;
+  background: linear-gradient(112deg, #fff 12%, #f1eaf5 100%);
+  box-shadow: 0 8px 24px rgb(54 37 64 / 5%);
+}
+
+.planner-eyebrow {
+  margin: 0 0 9px;
+  color: #805b92;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.planner-intro h1 {
+  margin: 0;
+  color: #30263a;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.planner-intro p:last-child {
+  margin: 8px 0 0;
+  color: #706978;
+  font-size: 15px;
+}
+
+.planner-intro-icon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #dfe8f7, #f1e4f4);
+  color: #6079a8;
+  font-size: 28px;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.35fr);
+  align-items: start;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.planner-panel .p-card {
+  border: 1px solid #ece7ef;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 7px 20px rgb(54 37 64 / 5%);
+}
+
+.planner-panel .p-card-body {
+  padding: 23px;
+}
+
+.planner-panel .p-card-title {
+  margin: 0 0 19px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.planner-panel .p-card-content {
+  padding: 0;
+}
+
+.planner-card-title,
+.planner-schedule-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planner-card-title h2 {
+  margin: 0;
+  color: #332c39;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.planner-card-title p {
+  margin: 5px 0 0;
+  color: #77717d;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.planner-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #eaf0fb;
+  color: #5272a9;
+  font-size: 17px;
+}
+
+.schedule-icon {
+  background: #f1e9f5;
+  color: #76518d;
+}
+
+.planner-form {
+  display: grid;
+  gap: 18px;
+}
+
+.planner-field {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  color: #514957;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.planner-calendar,
+.planner-item-dropdown {
+  width: 100%;
+}
+
+.planner-calendar .p-inputtext,
+.planner-item-dropdown {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 10px;
+}
+
+.planner-calendar .p-inputtext {
+  border-color: #ded7e3;
+}
+
+.planner-calendar .p-inputtext:focus,
+.planner-item-dropdown.p-focus {
+  border-color: #9676a8;
+  box-shadow: 0 0 0 3px rgb(118 81 141 / 13%);
+}
+
+.planner-calendar-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px 2px;
+  color: #807986;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.planner-calendar-footer i {
+  margin-top: 1px;
+  color: #76518d;
+}
+
+.planner-item-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.planner-item-swatch,
+.planner-outfit-swatch {
+  display: block;
+  flex: 0 0 auto;
+  border: 1px solid rgb(45 38 51 / 12%);
+  border-radius: 9px;
+}
+
+.planner-item-swatch {
+  width: 30px;
+  height: 30px;
+}
+
+.planner-item-option-text {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.planner-item-option-text strong {
+  overflow: hidden;
+  color: #352d3a;
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.planner-item-option-text small {
+  color: #847d89;
+  font-size: 11px;
+}
+
+.planner-dropdown-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  color: #807986;
+  font-size: 12px;
+}
+
+.planner-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.planner-schedule-heading {
+  justify-content: space-between;
+}
+
+.planner-outfit-count {
+  display: grid;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  place-items: center;
+  border-radius: 999px;
+  background: #f2edf5;
+  color: #68477e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.planner-empty-state {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
+  padding: 20px;
+  border: 1px dashed #e6dfea;
+  border-radius: 13px;
+  background: #fdfbfe;
+  text-align: center;
+}
+
+.planner-empty-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 2px;
+  place-items: center;
+  border-radius: 16px;
+  background: #f1e9f5;
+  color: #76518d;
+  font-size: 20px;
+}
+
+.planner-empty-state strong {
+  color: #42374b;
+  font-size: 14px;
+}
+
+.planner-empty-state p {
+  max-width: 280px;
+  margin: 0;
+  color: #807986;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.planner-outfit-list {
+  display: grid;
+  gap: 10px;
+}
+
+.planner-outfit {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #eeeaf0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.planner-outfit-swatch {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+.planner-outfit-details {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  gap: 5px;
+}
+
+.planner-outfit-details strong {
+  overflow: hidden;
+  color: #352d3a;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.planner-outfit-details span {
+  color: #807986;
+  font-size: 12px;
+}
+
+.planner-outfit-status {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: #eef4ef;
+  color: #507457;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.planner-error {
+  margin-top: 18px;
+}
+
+.planner-error .p-card-body {
+  padding: 13px 17px;
+}
+
+.planner-error-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a13e3a;
+  font-size: 13px;
+}
+
+.planner-error-content i {
+  font-size: 17px;
+}
+
+@media (max-width: 800px) {
+  .planner-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .planner-header-content,
+  .planner-content {
+    width: min(100% - 32px, 480px);
+  }
+
+  .planner-header-content {
+    min-height: 0;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .planner-nav {
+    justify-content: space-between;
+    gap: 2px;
+  }
+
+  .planner-nav-link {
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 8px;
+    font-size: 12px;
+  }
+
+  .planner-content {
+    padding: 24px 0 40px;
+  }
+
+  .planner-intro {
+    padding: 23px;
+    border-radius: 17px;
+  }
+
+  .planner-intro-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 19px;
+    font-size: 22px;
+  }
+
+  .planner-intro p:last-child {
+    font-size: 14px;
+  }
+
+  .planner-grid {
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .planner-panel .p-card-body {
+    padding: 18px;
+  }
+
+  .planner-form-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .planner-form-actions .p-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .planner-empty-state {
+    min-height: 190px;
+  }
+
+  .planner-outfit {
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .planner-outfit-swatch {
+    width: 36px;
+    height: 36px;
+  }
+
+  .planner-outfit-status {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .planner-intro-icon {
+    display: none;
+  }
+
+  .planner-nav-link {
+    font-size: 11px;
+  }
+}
+
+.upload-empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  color: #655b6b;
+  text-align: center;
+}
+
+.upload-empty-icon,
+.wardrobe-empty-state-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 4px;
+  place-items: center;
+  border-radius: 14px;
+  background: #f1e9f5;
+  color: #76518d;
+  font-size: 18px;
+}
+
+.upload-empty strong,
+.wardrobe-empty-state strong {
+  color: #42374b;
+  font-size: 14px;
+}
+
+.upload-empty span:not(.upload-empty-icon),
+.upload-empty small {
+  color: #807986;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.upload-empty small {
+  margin-top: 4px;
+}
+
+.inventory-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.item-count {
+  flex: 0 0 auto;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #f2edf5;
+  color: #68477e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.wardrobe-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.wardrobe-table th {
+  padding: 11px 12px;
+  border-bottom: 1px solid #eeeaf0;
+  color: #807986;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.wardrobe-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0edf2;
+  color: #514957;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.wardrobe-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.wardrobe-thumbnail {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #eeeaf0;
+  border-radius: 11px;
+  background: #f8f6f9;
+  object-fit: cover;
+}
+
+.wardrobe-item-name,
+.wardrobe-item-category {
+  display: block;
+}
+
+.wardrobe-item-name {
+  color: #352d3a;
+  font-weight: 650;
+}
+
+.wardrobe-item-category {
+  margin-top: 4px;
+  color: #847d89;
+  font-size: 12px;
+}
+
+.wardrobe-color {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #77717d;
+  font-size: 12px;
+}
+
+.wardrobe-color-swatch {
+  width: 23px;
+  height: 23px;
+  border: 1px solid rgb(45 38 51 / 12%);
+  border-radius: 50%;
+}
+
+.wardrobe-color-swatch.light-swatch {
+  border-color: #dcd6e0;
+}
+
+.wardrobe-actions {
+  width: 48px;
+  text-align: right;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.wardrobe-empty-state {
+  display: flex;
+  min-height: 190px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+}
+
+.wardrobe-empty-state p {
+  margin: 0;
+  color: #807986;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .wardrobe-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .upload-panel {
+    order: 1;
+  }
+
+  .inventory-panel {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .wardrobe-header-content,
+  .wardrobe-content {
+    width: min(100% - 32px, 480px);
+  }
+
+  .wardrobe-header-content {
+    min-height: 0;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .wardrobe-nav {
+    justify-content: space-between;
+    gap: 2px;
+  }
+
+  .wardrobe-nav-link {
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 8px;
+    font-size: 12px;
+  }
+
+  .wardrobe-content {
+    padding: 24px 0 40px;
+  }
+
+  .wardrobe-intro {
+    padding: 23px;
+    border-radius: 17px;
+  }
+
+  .wardrobe-intro-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 19px;
+    font-size: 22px;
+  }
+
+  .wardrobe-intro p:last-child {
+    font-size: 14px;
+  }
+
+  .wardrobe-layout {
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .wardrobe-item-form {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .wardrobe-item-form > label:nth-child(4),
+  .wardrobe-item-form > label:nth-child(5),
+  .photo-field,
+  .wardrobe-item-form > [role="alert"],
+  .wardrobe-item-form > [role="status"],
+  .wardrobe-item-form > p-button {
+    grid-column: 1;
+  }
+
+  .wardrobe-item-form > p-button {
+    width: 100%;
+  }
+
+  .wardrobe-item-form > p-button .p-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .wardrobe-panel .p-card-body {
+    padding: 18px;
+  }
+
+  .wardrobe-photo-upload .p-fileupload-content {
+    min-height: 132px;
+  }
+
+  .inventory-heading {
+    margin-bottom: 12px;
+  }
+
+  .wardrobe-table thead {
+    display: none;
+  }
+
+  .wardrobe-table,
+  .wardrobe-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .wardrobe-table tbody tr {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: center;
+    gap: 4px 12px;
+    padding: 13px 42px 13px 0;
+    border-bottom: 1px solid #f0edf2;
+  }
+
+  .wardrobe-table tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .wardrobe-table td {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .wardrobe-table td[data-label="Photo"] {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .wardrobe-table td[data-label="Item"] {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .wardrobe-table td[data-label="Color"] {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .wardrobe-table .wardrobe-actions {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: auto;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 380px) {
+  .wardrobe-intro-icon {
+    display: none;
+  }
+
+  .wardrobe-nav-link {
+    font-size: 11px;
+  }
+
+  .wardrobe-photo-upload .p-fileupload-buttonbar {
+    padding: 9px;
+  }
+}
